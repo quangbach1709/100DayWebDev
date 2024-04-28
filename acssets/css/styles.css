@@ -1,4 +1,4 @@
-main {
+#hero {
     height: 800px;
     background-image: url("/acssets/img/cities/ocean.jpg");
     background-position: center;
@@ -52,4 +52,45 @@ main {
 
 #hero-content a:hover {
     background-color: rgb(255, 238, 0);
+}
+#destinations-ul{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: auto auto 40px;
+
+}
+#highlights{
+    padding: 24px;
+    background: linear-gradient(0deg,rgb(227,255,253),rgb(202,243,240));
+/*    background chuyen mau*/
+
+}
+#highlights h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(59,65,64);
+    margin: 24px 0;
+}
+.destinations{
+    margin: 0 20px;
+    text-transform: uppercase;
+}
+.destinations img{
+    height: 200px;
+    width: 100%;
+    box-shadow: 2px 4px 8px rgb(68,67,67);
+    border-radius: 10px;
+    object-fit: cover;
+/*    vi tri cua doi tuong*/
+}
+.destinations p{
+    text-align: center;
+    font-size: 24px;
+    color: rgb(124,123,123);
+    margin: 20px 0;
+}
+.destinations strong{
+    color: rgb(0,160,117);
 }
