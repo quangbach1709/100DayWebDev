@@ -138,6 +138,44 @@ nav {
 
 }
 
+#content .content-section {
+    width: 800px;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+    /*    can giua doi tuong*/
+
+}
+
+
+#content .section-header {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    /*    khoang cach tung chu cai */
+
+}
+
+#content .section-sub-heading {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.6;
+    /*    lam mo chu 60%*/
+}
+
+#content .about-text {
+    font-size: 15px;
+    margin-top: 25px;
+    text-align: justify;
+    /*    can le 2 ben*/
+    line-height: 1.4;
+    /*    khoang cach cac dong*/
+}
+
 footer {
 
 }
