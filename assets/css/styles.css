@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+.clear {
+    clear: both;
+    /*giai quyet van de float*/
+}
+
+.text-white {
+    color: white !important;
+    /*    tao 1 class doi mau chu tuong tu nhu ham cuc bo*/
+}
+
 #main {
 
 }
@@ -174,6 +184,131 @@ nav {
     /*    can le 2 ben*/
     line-height: 1.4;
     /*    khoang cach cac dong*/
+}
+
+#content .member-list {
+    margin-top: 48px;
+    /*overflow: hidden;*/
+}
+
+#content .member-item {
+    float: left;
+    width: calc(100% / 3);
+    /*    chi cac item cho du 100% rong trang*/
+    text-align: center;
+}
+
+#content .member-name {
+
+    font-size: 15px;
+}
+
+#content .member-img {
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 4px;
+}
+
+.tour-section {
+    background-color: black;
+
+}
+
+.content-section {
+
+}
+
+.tickets-list {
+    background-color: #fff;
+    list-style: none;
+    margin-top: 40px;
+}
+
+.tickets-list li {
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tickets-list .sould-out {
+    background-color: #f44336;
+    color: white;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+
+.tickets-list .quantity {
+    float: right;
+    /*them float se co tinh chat block */
+    width: 24px;
+    height: 24px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 50%;
+    /*    tao hinh tron*/
+    margin-top: -2px;
+}
+
+/*place*/
+.places-list {
+    margin: 32px -8px 0;
+    padding-bottom: 48px;
+}
+
+.place-item {
+    float: left;
+    width: calc(100% / 3);
+    padding: 0 8px;
+}
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+
+}
+
+.place-body {
+    background-color: white;
+    color: black;
+    padding: 16px;
+    font-size: 15px;
+}
+
+.place-heading {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.place-time {
+    margin-top: 15px;
+    color: #757575;
+}
+
+.place-desc {
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+.place-buy-btn {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.place-buy-btn:hover {
+    color: black;
+    background-color: #cccccc;
 }
 
 footer {
