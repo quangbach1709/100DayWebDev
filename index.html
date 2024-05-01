@@ -92,7 +92,7 @@
                             <h3 class="place-heading">New York</h3>
                             <p class="place-time">Fri 27 Nov 2016</p>
                             <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <a class="place-buy-btn" href="#">Buy Tickets</a>
+                            <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                         </div>
                     </div>
                     <div class="place-item">
@@ -101,7 +101,7 @@
                             <h3 class="place-heading">Paris</h3>
                             <p class="place-time">Sat 28 Nov 2016</p>
                             <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <a class="place-buy-btn" href="#">Buy Tickets</a>
+                            <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                         </div>
                     </div>
                     <div class="place-item">
@@ -112,7 +112,7 @@
                             <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.
 
                             </p>
-                            <a class="place-buy-btn" href="#">Buy Tickets</a>
+                            <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                         </div>
                     </div>
                     <div class="clear"></div>
@@ -130,8 +130,67 @@
 
 
 </div>
+<div class="modal js-modal">
+    <div class="modal-container js-modal-container">
+        <div class="modal-close js-modal-close">
+            <i class="ti-close"></i>
+        </div>
+        <div class="modal-header">
+            <i class="modal-header-icon ti-bag"></i>
+            Tickets
+        </div>
+        <div class="modal-body">
+            <label class="modal-label" for="ticket-quantity">
+                <i class="ti-shopping-cart"></i>
+                Tickets, $15 per person
+            </label>
+            <input class="modal-input" id="ticket-quantity" placeholder="How many?" type="text">
+
+            <label class="modal-label" for="ticket-email">
+                <i class="ti-user"></i>
+                Send to
+            </label>
+            <input class="modal-input" id="ticket-email" placeholder="Enter email..." type="email">
+
+            <button id="btn-buy-tickets">
+                Pay
+                <i class="ti-check"></i>
+            </button>
+        </div>
+
+        <div class="model-footer">
+            <p class="model-help">Need <a href="">help?</a></p>
+        </div>
+    </div>
+</div>
 <footer>
 
 </footer>
+
+<script>
+    const buyBtns = document.querySelectorAll('.js-buy-ticket')
+    const modal = document.querySelector('.js-modal')
+    const modalCloe = document.querySelector('.js-modal-close')
+    const modalContainer = document.querySelector('.js-modal-container')
+
+    function showBuyTicket() {
+        modal.classList.add('open')
+    }
+
+    function hideBuyTicket() {
+        modal.classList.remove('open')
+    }
+
+    for (const buyBtn of buyBtns) {
+        buyBtn.addEventListener('click', showBuyTicket)
+    }
+    modalCloe.addEventListener('click', hideBuyTicket)
+    modal.addEventListener('click', hideBuyTicket)
+    // dong modal khi an vi tri ben ngoai
+    modalContainer.addEventListener('click', function (ev) {
+        ev.stopPropagation()
+    })
+    //     stop dung noi bot trong js
+</script>
 </body>
 </html>
