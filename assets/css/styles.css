@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+/*Common*/
+/*cac ham cuc bo*/
 .clear {
     clear: both;
     /*giai quyet van de float*/
@@ -14,11 +16,77 @@
     /*    tao 1 class doi mau chu tuong tu nhu ham cuc bo*/
 }
 
+.text-content {
+    text-align: center !important;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.column {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.column-full {
+    width: 100%;
+}
+
+.column-third {
+    width: calc(100% / 3);
+}
+
+.column-half {
+    width: 50%;
+}
+
+.btn {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    border: none;
+
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: black;
+    background-color: #cccccc;
+}
+
+.full-right {
+    float: right !important;
+}
+
+
+/*Main*/
 #main {
 
 }
 
 html {
+    scroll-behavior: smooth;
     font-family: Arial, Haettenschweiler, sans-serif;
 }
 
@@ -150,7 +218,7 @@ nav {
 
 #content .content-section {
     width: 800px;
-    padding: 64px 0;
+    padding: 64px 0 112px;
     margin-left: auto;
     margin-right: auto;
     /*    can giua doi tuong*/
@@ -191,12 +259,6 @@ nav {
     /*overflow: hidden;*/
 }
 
-#content .member-item {
-    float: left;
-    width: calc(100% / 3);
-    /*    chi cac item cho du 100% rong trang*/
-    text-align: center;
-}
 
 #content .member-name {
 
@@ -255,15 +317,11 @@ nav {
 
 /*place*/
 .places-list {
-    margin: 32px -8px 0;
-    padding-bottom: 48px;
+    /*margin: 32px -8px 0;*/
+    margin-top: 32px;
+
 }
 
-.place-item {
-    float: left;
-    width: calc(100% / 3);
-    padding: 0 8px;
-}
 
 .place-img {
     width: 100%;
@@ -297,23 +355,6 @@ nav {
     line-height: 1.4;
 }
 
-.place-buy-btn {
-    color: white;
-    background-color: black;
-    text-decoration: none;
-    padding: 11px 16px;
-    display: inline-block;
-    margin-top: 15px;
-}
-
-.place-buy-btn:hover {
-    color: black;
-    background-color: #cccccc;
-}
-
-footer {
-
-}
 
 .modal {
     position: fixed;
@@ -425,3 +466,66 @@ footer {
         transform: translateY(0);
     }
 }
+
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    width: 100%;
+    outline-color: blue;
+}
+
+.map-section img {
+    width: 100%;
+}
+
+footer {
+    padding: 64px 16px;
+    text-align: center;
+
+}
+
+footer .socials-list {
+    font-size: 24px;
+
+}
+
+footer .socials-list a {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+footer .copy-right a:hover, footer .socials-list a:hover {
+    color: rgba(0, 0, 0, 0.4);
+
+}
+
+footer .copy-right {
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+
+}
+
+footer .copy-right a {
+    color: rgba(0, 0, 0, 0.6);
+
+}
+
+
