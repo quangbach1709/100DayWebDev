@@ -16,7 +16,7 @@
     /*    tao 1 class doi mau chu tuong tu nhu ham cuc bo*/
 }
 
-.text-content {
+.text-center {
     text-align: center !important;
 }
 
@@ -218,11 +218,11 @@ nav {
 
 #content .content-section {
     width: 800px;
-    padding: 64px 0 112px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     /*    can giua doi tuong*/
-
+    padding: 64px 16px 112px;
 }
 
 
@@ -527,5 +527,3 @@ footer .copy-right a {
     color: rgba(0, 0, 0, 0.6);
 
 }
-
-
