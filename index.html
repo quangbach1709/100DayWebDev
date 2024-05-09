@@ -7,6 +7,7 @@
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>The Band</title>
     <link href="./assets/css/styles.css" rel="stylesheet">
+    <link href="./assets/css/responsive.css" rel="stylesheet">
     <link href="./assets/fonts/themify-icons/themify-icons.css" rel="stylesheet">
 </head>
 <body>
@@ -14,10 +15,10 @@
     <header>
         <nav>
             <ul id="nav">
-                <li><a href="#">home</a></li>
-                <li><a href="#band">band</a></li>
-                <li><a href="#tour">tour</a></li>
-                <li><a href="#contact">contact</a></li>
+                <li><a class="item-menu" href="#">home</a></li>
+                <li><a class="item-menu" href="#band">band</a></li>
+                <li><a class="item-menu" href="#tour">tour</a></li>
+                <li><a class="item-menu" href="#contact">contact</a></li>
                 <li>
                     <a href="#">
                         more
@@ -33,6 +34,9 @@
         </nav>
         <div class="search-btn">
             <i class="search-icon ti-search"></i>
+        </div>
+        <div class="mobile-menu-btn">
+            <i class="menu-icon ti-menu"></i>
         </div>
     </header>
 
@@ -206,6 +210,30 @@
 </footer>
 
 <script>
+    <!--Su ly hien menu tren mobile-->
+    const head = document.querySelector('header')
+    const mobileMenu = document.querySelector('.mobile-menu-btn')
+    const heightHeader = head.offsetHeight
+    mobileMenu.addEventListener('click', showMenu)
+
+    function showMenu() {
+        const isClose = head.offsetHeight === heightHeader
+        if (isClose) {
+            head.style.height = 'auto'
+        } else {
+            head.style.height = null
+        }
+    }
+
+    // Su ly dong menu
+    const clickMenuItems = document.querySelectorAll('.item-menu')
+
+    for (const clickMenuItem of clickMenuItems) {
+        clickMenuItem.addEventListener('click', function () {
+            head.style.height = null
+        })
+    }
+    //Su ly ban be
     const buyBtns = document.querySelectorAll('.js-buy-ticket')
     const modal = document.querySelector('.js-modal')
     const modalCloe = document.querySelector('.js-modal-close')
@@ -229,6 +257,8 @@
         ev.stopPropagation()
     })
     //     stop dung noi bot trong js
+
+
 </script>
 </body>
 </html>

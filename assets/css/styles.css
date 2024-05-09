@@ -98,12 +98,32 @@ header {
     left: 0;
     right: 0;
     z-index: 1;
+    overflow: hidden;
 }
 
+header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+header .mobile-menu-btn,
 header .search-btn {
     float: right;
     padding: 0 21px;
+    position: absolute;
+    top: 0;
+    right: 0;
 
+}
+
+header .mobile-menu-btn:hover {
+    background-color: #cccccc;
+}
+
+header .mobile-menu-btn:hover .menu-icon {
+    color: black;
 }
 
 header .search-btn:hover {
@@ -111,6 +131,7 @@ header .search-btn:hover {
     cursor: pointer;
 }
 
+header .menu-icon,
 header .search-icon {
     color: white;
     font-size: 20px;
