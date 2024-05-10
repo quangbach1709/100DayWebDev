@@ -164,7 +164,7 @@ nav {
 }
 
 #nav li:hover .subnav,
-#nav li:hover > ul.subnav {
+#nav li:hover > ul .subnav {
     display: block;
 }
 
@@ -239,6 +239,7 @@ nav {
 #slider .text-description {
     font-size: 15px;
     margin-top: 25px;
+    text-shadow: 0 0 1px black;
 }
 
 #content {
